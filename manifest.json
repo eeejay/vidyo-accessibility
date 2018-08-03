@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.mozilla.com/web/neo.index.html"],
-      "js": ["content-script.js"],
+      "js": ["a11y-script.js"],
       "css": ["a11y-style.css"],
       "all_frames": true
     }
