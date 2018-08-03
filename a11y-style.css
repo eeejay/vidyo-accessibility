@@ -1,0 +1,58 @@
+#results-container.view-all {
+  height: calc(100% - 4em);
+}
+
+search-results {
+  position: relative;
+}
+
+[role=option][data-active-descendant] {
+  outline: 2px dotted yellow;
+  outline-offset: -5px;
+}
+
+[role=option] {
+  transition: none;
+}
+
+:focus {
+  outline: 2px solid orange;
+}
+
+#sidebar :focus {
+  outline-color: yellow;
+}
+
+input#search {
+  outline-offset: 2px;
+}
+
+[role=tab] {
+  outline-offset: -2px;
+}
+
+#create-room-form {
+    display: none;
+}
+
+/* stuff */
+
+.tooltip {
+  visibility: hidden;
+  transition-property: opacity, visibility;
+}
+
+.tooltip.is-visible {
+  visibility: visible;
+  transition-property: opacity, visibility;
+}
+
+/* In call */
+
+.sidebar {
+  transition-property: margin, visibility;
+}
+
+body.video-opened:not(.control-panel-is-open) .sidebar {
+  visibility: hidden;
+}

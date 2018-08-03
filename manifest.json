@@ -1,0 +1,19 @@
+{
+  "description": "Make VidyoConnect just a bit accessible",
+  "manifest_version": 2,
+  "name": "VidyoConnect Accessibility",
+  "version": "1.0",
+  "homepage_url": "https://github.com/eeejay/vidyo-accessibility",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.mozilla.com/web/neo.index.html"],
+      "js": ["content-script.js"],
+      "css": ["a11y-style.css"],
+      "all_frames": true
+    }
+  ]
+}
