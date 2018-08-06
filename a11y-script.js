@@ -271,10 +271,11 @@ const ELEMENTS_TO_FIX = {
   },
 
   "#sidebar-menu-button > .menu-button": function(e) {
-      e.setAttribute("role", "button");
-      e.setAttribute("aria-label", e.querySelector(".tooltip").textContent);
-      e.setAttribute("aria-expanded", !!e.closest(".control-panel-is-open"));
-      e.setAttribute("aria-controls", "sidebar");
+    e.tabIndex = 0;
+    e.setAttribute("role", "button");
+    e.setAttribute("aria-label", e.querySelector(".tooltip").textContent);
+    e.setAttribute("aria-expanded", !!e.closest(".control-panel-is-open"));
+    e.setAttribute("aria-controls", "sidebar");
   }
 };
 
@@ -285,7 +286,6 @@ function simulateClick(node) {
     n.dispatchEvent(clickEvent);
   }
 
-  triggerMouseEvent (node, "mouseover");
   triggerMouseEvent (node, "mousedown");
   triggerMouseEvent (node, "mouseup");
   triggerMouseEvent (node, "click");
